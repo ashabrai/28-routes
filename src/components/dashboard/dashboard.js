@@ -1,71 +1,57 @@
 import React from 'react';
-import ExpenseForm from "../notecreate-form/notecreate-form";
+import NoteForm from "../notecreate-form/notecreate-form";
 import uuid from 'uuid/v4';
-
+import NoteItem from '../note-item/note-item';
+import NoteList from '../note-list/note-list';
 
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            title: '',
-            body: '',
-        };
+        this.state = {};
+        this.state.notes = [];
 
     }
 
-    renderExpenses = () => {
-        return (
-            <ul>
-            {
-                this.state.expenses.map((currentExpense) => {
-                return <li key={currentExpense.id}>
-                {currentExpense.title} : $ {currentExpense.price}
-            </li>
-            })
-    }
-    </ul>
-    );
-    };
-
-
-    handleAddNote = (note) => {
+    handleAddNote =(note)=> {
         // Vinicio - over here, I'm going to assume the expense is coming with
         // a title and a price
-        expense.createdOn = new Date();
-        expense.id = uuid();
+        note.createdOn = new Date();
+        note.id = uuid();
         return this.setState((previousState) => {
             return {
-                expenses: [...previousState.expenses, expense],
-            }
+                notes: [...previousState.notes, note],
+            };
         });
     };
 
-    calculateTotalPrice = () => {
-        return this.state.expenses.reduce((sum, currentExpense) => {
-            return sum + Number(currentExpense.price);
-        },0);
+    handleRemoveNote = (note)=> {
+        console.log(this);
+        console.log('Calling the callback');
+        return this.setState((previousState) => {
+            const filtered = previousState.notes.filter((item) => {
+                return item.id !== note.id;
+            });
+            return {
+                notes: filtered,
+                error: null,
+            };
+        });
     };
 
     render() {
         return (
             <section>
-            <h2>Dashboard</h2>
-            <p>Add new Expense</p>
-        <ExpenseForm handleAddExpense={this.handleAddExpense}/>
-        <p>Here is a list of all your expenses so far:</p>
-        { this.renderExpenses() }
-    <p>Your total debt is : $ {this.calculateTotalPrice() } </p>
-        </section>
-    );
+                <h2>Dashboard</h2>
+                <p>Add new Note</p>
+                <NoteForm handleAddNote={this.handleAddNote}/>
+                <NoteList notes={this.state.notes} handleRemoveNote={this.handleRemoveNote}/>
+                {/*<NoteList notes={this.state.notes} handleUpdateNote={this.handleUpdateNote}/>*/}
+
+            </section>
+        );
     }
 }
-/* THOUGHT PROCESS:
-  1 - Who holds the main (relevant) state of the application
-       - The one that holds the main state, will usually define functions to update state.
-       - handleAdd, handleRemove, handleUpdate
-  2 - Who triggers state changes (usually, child classes)
-       - The one that trigger state changes will receive handlers as props.
- */
 
 export default Dashboard;
+

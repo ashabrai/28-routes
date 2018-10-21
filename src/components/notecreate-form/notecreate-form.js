@@ -1,21 +1,22 @@
 import React from 'react';
-import Dashboard from "../dashboard/dashboard";
 import PropTypes from 'prop-types';
 
-class ExpenseForm extends React.Component {
+class NoteCreateForm extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
             title: '',
-            price: 0,
+            body: '',
         };
+        // this.state = this.props.note ? this.props.note : emptyState;
     }
+
     handleChange = (event) => {
+        event.preventDefault();
+
         const { name, value } = event.target;
-        //! Vinicio - name is going to be the element that trigger the event
-        //! Vinicio - value is going to be the new value
-        //! Vinicio - name is going to be either 'title' or 'price'
+
         this.setState({
             [name]: value,
         });
@@ -23,35 +24,35 @@ class ExpenseForm extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        this.props.handleAddExpense(this.state);
+        this.props.handleAddNote(this.state);
     };
 
     render() {
+        const buttonText = this.props.note ? 'Update' : 'Create';
         return (
-            <form onSubmit={this.handleSubmit}>
-    <input
-        type="text"
-        name="title"
-        placeholder="title"
-        value={this.state.title}
-        onChange={this.handleChange}
-        />
-        <input
-        type="number"
-        name="price"
-        placeholder="0"
-        value={this.state.price}
-        onChange={this.handleChange}
-        />
-        <button type="submit">Create Expense</button>
+        <form onSubmit={this.handleSubmit}>
+            <input
+                type="text"
+                name="title"
+                placeholder="title"
+                value={this.state.title}
+                onChange={this.handleChange}
+            />
+            <input
+                type="text"
+                name="body"
+                placeholder="enter note here"
+                onChange={this.handleChange}
+            />
+            <button type="submit">{buttonText} Create Note</button>
         </form>
-    );
+        );
     }
 }
 
-ExpenseForm.propTypes = {
-    handleAddExpense : PropTypes.func,
+NoteCreateForm.propTypes = {
+    handleAddNote : PropTypes.func,
 };
 
 
-export default ExpenseForm;
+export default NoteCreateForm;
