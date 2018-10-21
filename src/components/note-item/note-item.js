@@ -11,7 +11,7 @@ class NoteItem extends React.Component {
             {title} : {body}
             <button onClick = {this.props.handleRemoveNote.bind(null,this.props.note)}>
                 Delete Note</button>
-                {/*<button onClick ={this.props.handleUpdateNote.bind(null,this.props.note)}>Update Note</button>*/}
+                {/*<button onClick ={this.props.handleChange.bind(null,this.props.note)}>Update Note</button>*/}
         <NoteCreateForm note ={this.props.note}/>
             </li>
         )

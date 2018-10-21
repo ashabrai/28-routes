@@ -38,18 +38,6 @@ class Dashboard extends React.Component {
             };
         });
     };
-    //
-    // handleUpdateNote = (note) =>{
-    //     this.setState({note}) => ({
-    //         note: [
-    //             ...note.slice(0,1),
-    //     }
-    //         ...note[1],
-    //         name: 'newName',
-    // },
-    //         ]
-    //     });
-    // };
 
     render() {
         return (

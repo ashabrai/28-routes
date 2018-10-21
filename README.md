@@ -1,6 +1,8 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 28- Note
+![cf](http://i.imgur.com/7v5ASc8.png) 28- Routing & Testing
 ===
-This application allows you to 
+This application creates a form, that allows you to add a note. Be able
+to see all notes in one list. And then you can delete the note that you don't need.
+
 ## Getting Started
    * Instructions of what has been done will allow you to get the code running on your 
    local machine. 
@@ -9,9 +11,9 @@ This application allows you to
 #### Installing 
    * Clone the repo into your local machine -git clone -directory name here- 
    * Next install project files - npm install 
-   * You will need install superagent - npm install superagent
    * Install - npm i -D prop-types
    * Install -npm i -D @babel/polyfill
+   * Install -npm i uuid
    
 #### Testing  
 No testing atm.
@@ -23,4 +25,4 @@ No testing atm.
 This project is licensed under the MIT License - see the LICENSE.md file for details
 
 #### Version
-* 1.0.2
+* 1.0.4
