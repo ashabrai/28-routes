@@ -5,32 +5,31 @@ import NoteItem from '../note-item/note-item';
 class NoteCreateList extends React.Component {
     render() {
         return (
-            <div>
+            <ul>
                 {
-                    this.props.notes.length > 0
-                        ?
-                        <ul className='noteList'>
-                            {
-                                this.props.notes.map((note) => {
-                                    return (
-                                        <li key={note.id}>
-                                            <NoteItem note={note} handleRemoveNote={this.props.handleRemoveNote}/>
-                                        </li>
-                                    );
-                                })
-                            }
-                        </ul>
-                        :
-                        <h3>Notes listed here</h3>
+                    // this.props.notes.length > 0
+                    //     ?
+
+                this.props.notes.map((note) => {
+                    return <NoteItem key={note.id}
+                            note={note}
+                            handleRemoveNote={this.props.handleRemoveNote}
+                            handleUpdate={this.props.handleUpdate}
+                            // handleAddNote={this.props.handleUpdate}
+                            />;
+                     })
                 }
-            </div>
-        )
+            </ul>
+        );
     }
 }
 
 NoteCreateList.propTypes = {
-    key: PropTypes.object,
-    notes: PropTypes.object,
+    notes: PropTypes.array,
+    handleRemoveNote: PropTypes.func,
+    handleUpdate: PropTypes.func,
+    // handleAddNote: PropTypes.func,
+
 };
 
 export default NoteCreateList;

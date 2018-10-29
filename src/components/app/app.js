@@ -10,7 +10,6 @@ class App extends React.Component {
         super(props); // Initialize everything on React's side of the component
     }
 
-    //! React components NEED to have one render function in every compontent
     render() {
         return (
             <main>
@@ -28,9 +27,8 @@ class App extends React.Component {
         </div>
         </BrowserRouter>
         </main>
-    );
+        );
     }
 }
 
-//! Vinicio - export default, means I'm only exporting ONE entity
 export default App;
