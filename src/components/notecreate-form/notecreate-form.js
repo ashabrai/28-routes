@@ -27,6 +27,7 @@ class NoteCreateForm extends React.Component {
         this.props.handleAddNote(this.state);
     };
 
+
     render() {
         const buttonText = this.props.note ? 'Update' : 'Create';
         return (
@@ -38,13 +39,13 @@ class NoteCreateForm extends React.Component {
                 value={this.state.title}
                 onChange={this.handleChange}
             />
-            <input
-                type="text"
+            <textarea
                 name="body"
                 placeholder="enter note here"
                 onChange={this.handleChange}
+                value={this.state.body}
             />
-            <button type="submit">{buttonText} Create Note</button>
+            <button type="submit">{buttonText} Note</button>
         </form>
         );
     }
@@ -52,6 +53,7 @@ class NoteCreateForm extends React.Component {
 
 NoteCreateForm.propTypes = {
     handleAddNote : PropTypes.func,
+    note: PropTypes.object,
 };
 
 
