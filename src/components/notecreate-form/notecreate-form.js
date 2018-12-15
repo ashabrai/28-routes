@@ -19,6 +19,7 @@ class NoteCreateForm extends React.Component {
 
         this.setState({
             [name]: value,
+
         });
     };
 

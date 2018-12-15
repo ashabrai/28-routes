@@ -28,7 +28,7 @@ class Dashboard extends React.Component {
                 if(item.id === note.id){
                     item.id = note;
                 }
-                return item;
+                return note;
                 }),
             }
         });
