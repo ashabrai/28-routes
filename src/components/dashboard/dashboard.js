@@ -12,7 +12,7 @@ class Dashboard extends React.Component {
 
     }
 
-    handleAddNote =(note)=> {
+    handleAddNote = (note) => {
         note.createdOn = new Date();
         note.id = uuid();
         return this.setState((previousState) => {
@@ -28,7 +28,7 @@ class Dashboard extends React.Component {
                 if(item.id === note.id){
                     item.id = note;
                 }
-                return item;
+                return note;
                 }),
             }
         });

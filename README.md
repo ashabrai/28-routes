@@ -6,7 +6,8 @@ to see all notes in one list. And then you can delete the note that you don't ne
 ## Getting Started
    * Instructions of what has been done will allow you to get the code running on your 
    local machine. 
-
+   * After installing everything to watch it come to life on your machine run 
+      - npm run watch
     
 #### Installing 
    * Clone the repo into your local machine -git clone -directory name here- 

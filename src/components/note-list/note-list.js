@@ -7,15 +7,11 @@ class NoteCreateList extends React.Component {
         return (
             <ul>
                 {
-                    // this.props.notes.length > 0
-                    //     ?
-
-                this.props.notes.map((note) => {
+                    this.props.notes.map((note) => {
                     return <NoteItem key={note.id}
                             note={note}
                             handleRemoveNote={this.props.handleRemoveNote}
                             handleUpdate={this.props.handleUpdate}
-                            // handleAddNote={this.props.handleUpdate}
                             />;
                      })
                 }
