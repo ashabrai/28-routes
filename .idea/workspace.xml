@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f0cb645-e4cd-4f1b-9bf6-0bad322efa1a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing/landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing/landing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/note-list/note-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/note-list/note-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/notecreate-form/notecreate-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/notecreate-form/notecreate-form.js" afterDir="false" />
-    </list>
+    <list default="true" id="1f0cb645-e4cd-4f1b-9bf6-0bad322efa1a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -21,7 +15,7 @@
     <session id="66719327">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.opened" value="3" />
@@ -164,10 +158,10 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="5" />
-    <option name="y" value="23" />
-    <option name="width" value="1316" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1001" />
+    <option name="y" value="84" />
+    <option name="width" value="1280" />
     <option name="height" value="716" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -285,13 +279,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29719000" />
+    <option name="totallyTimeSpent" value="29776000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="525" y="0" width="755" height="800" extended-state="6" />
+    <frame x="1001" y="84" width="1280" height="716" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30517712" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17791899" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
